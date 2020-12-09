@@ -150,10 +150,12 @@ Agora sua estrutura de diretórios deverá estar assim:
     +- docker-compose.yml
 ```  
 
-Para o Dockerfile, basta adicionar a nova dependencia `psycopg2`a linha do pip install dentro do Dockerfile. Simples né?
+Para o Dockerfile, basta adicionar a nova dependencia `psycopg2`a linha do pip install dentro do Dockerfile e adicionar o novo `COPY` para o script sql no entrypoint. Simples né?
 
 ```Dockerfile
 RUN pip install -u flask psycopg2 # instala as dependencias do python
+
+COPY ./db_entrypoint/sql_entry.sql /docker-entrypoint-initdb.d/sql_entry.sql
 ```
 
 E agora a parte interessante! O docker-compose:
