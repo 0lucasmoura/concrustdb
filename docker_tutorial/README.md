@@ -94,7 +94,6 @@ Vamos ver o poder do docker mostrando a facilidade de uso da ferramenta!
 
 ### mySQL
 
-
 ### postgres
 
 Para levantar um container do postgres com docker, basta rodarmos o seguinte comando:
@@ -140,7 +139,6 @@ Documentação do postgres: <https://www.postgresql.org/docs/>
 Informações e documentação do pgadmin4: <https://www.pgadmin.org/docs/pgadmin4/latest/container_deployment.html>
 
 Recomendo seguir o próximo tutorial! "Pequeno projeto com flask e postgres usando docker-compose!"  
-
 
 ## CheatSheet
 
