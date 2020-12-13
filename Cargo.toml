@@ -1,0 +1,10 @@
+[package]
+name = "concrust_db"
+description = "A courseware project that provides the basis for understanding and implementing concurrency in relational databases"
+version = "0.1.0"
+authors = ["Lucas de Moura Pereira <lucas.moura_catron@outlook.com>"]
+keywords = ["terminal","database", "courseware"]
+
+[dependencies]
+console_engine = "1.4.2"
+petgraph = "0.5.1"
