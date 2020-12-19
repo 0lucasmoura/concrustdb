@@ -1,16 +1,23 @@
 # Instalando e utilizando o Docker
 
 ## O que é o docker?
-  
-O docker é uma ferramenta, ou melhor, uma suite de ferramentas feita para facilitar a vida do desenvolvedor, no caso, a sua vida! Ele utiliza o conceito de *"containerização"* de aplicações, onde um container guarda todo o código e dependencias do seu projeto, facilitando a execução da sua aplicação em qualquer sistema com o docker engine instalado!  
+
+O docker é uma ferramenta, ou melhor, uma suite de ferramentas feita para facilitar a vida do desenvolvedor, no caso, a sua vida! Ele utiliza o conceito de *"containerização"* de aplicações, onde um container guarda todo o código e dependencias do seu projeto, facilitando a execução da sua aplicação em qualquer sistema com o docker engine instalado!
 
 Antes do Docker existir nossa opção de separação da aplicação e suas dependencias da maquina base se restringia ao uso de VMs (Maquinas Virtuais), onde cada vm criada é bem pesada, tanto em execução, quanto espaço. Hoje em dia o docker permite a construção de todo um ambiente de desenvolvimento "on-the-go" com simples comandos e interface, além de garantir o envio e execução de todo o seu codebase em outra maquina com a facilidade de um `docker run`.
+
+![Containers x VM](https://i2.wp.com/www.docker.com/blog/wp-content/uploads/Blog.-Are-containers-..VM-Image-1.png?resize=1024%2C435&ssl=1)
+*Diferença arquitetural entre containers e VMs [2]*
 
 No nosso contexto de aprendizagem isso implica em, primeiramente, não encher nossas máquinas com várias dependencias e programas que podem ser inuteis fora do contexto da disciplina. Outro ponto, mais importante, é a capacidade do seu produto/trabalho rodar igualmente em qualquer maquina em que ele é instalado. Isso significa que será mais dificil o seu código quebrar no Mac de seu professor porque você escreveu seu código C na sua máquina Windows. O objetivo mor do docker é acabar com a expressão: *"Na minha máquina roda..."*.
 
 Além de todas essas vantagens, a que mais se sobressai é a grande comunidade por de tras do docker, presente principalmente no [dockerhub](https://hub.docker.com), que contém imagens já prontas para diversas aplicações, principalmente os bancos de dados que estaremos aqui utilizando@
 
-Para saber mais recomendo a leitura da [pagina de apresentação do docker](https://www.docker.com/why-docker) e entendimento sobre [containers](https://www.docker.com/resources/what-container).
+![Exemplo de maquina rodando container com diversas aplicações diferentes](https://i1.wp.com/www.docker.com/blog/wp-content/uploads/011f3ef6-d824-4d43-8b2c-36dab8eaaa72-2.jpg?w=650&ssl=1)
+*Exemplo de maquina rodando container com diversas aplicações diferentes [5]*
+
+
+Para saber mais recomendo a leitura da [pagina de apresentação do docker [1]](https://www.docker.com/why-docker) e entendimento sobre [containers [3]](https://www.docker.com/resources/what-container).
 
 ## Instalação
 
@@ -23,7 +30,7 @@ Para o uso do docker-engine no Windows ou Mac será necessário a instalação d
 
 #### Prerequisitos
 
-Para instalar o docker engine no ubuntu ([retirado da documentação oficial](https://docs.docker.com/engine/install/ubuntu/)), instale as seguintes dependencias:
+Para instalar o docker engine no ubuntu ([retirado da documentação oficial [4]](https://docs.docker.com/engine/install/ubuntu/)), instale as seguintes dependencias:
 
 ```sh
 sudo apt-get update
@@ -159,3 +166,15 @@ Para acessar um shell dentro do container:
 ```shell  
 docker exec -it ${id_ou_tag_do_container}
 ```
+
+## Referências
+
+[1] DOCKER, INC. (Estados Unidos). Docker: Orientation and Setup. In: DOCKER, INC. (Estados Unidos). Docker: Orientation and Setup. [S. l.], [2012-2020]. Disponível em: <https://docs.docker.com/get-started/>. Acesso em: 16 dez. 2020.
+
+[2] FONG, Jenny. Are Containers Replacing Virtual Machines?. In: DOCKER, INC. (Estados Unidos). Are Containers Replacing Virtual Machines?. [S. l.], 30 ago. 2018. Disponível em: <https://www.docker.com/blog/containers-replacing-virtual-machines/>. Acesso em: 16 dez. 2020.
+
+[3] DOCKER, INC. (Estados Unidos). What is a container?. In: DOCKER, INC. (Estados Unidos). What is a container?. [S. l.], [2012-2020]. Disponível em: <https://www.docker.com/resources/what-container>. Acesso em: 16 dez. 2020.
+
+[4] DOCKER, INC. (Estados Unidos). Installing Docker. In: DOCKER, INC. (Estados Unidos). Installing Docker. [S. l.], [2012-2020]. Disponível em: <https://docs.docker.com/engine/install>. Acesso em: 16 dez. 2020.
+
+[5] FONG, Jenny. Docker 101: Introduction to Docker webinar recap. In: DOCKER, INC. (Estados Unidos). Docker 101: Introduction to Docker webinar recap. [S. l.], 3 ago. 2017. Disponível em: <https://www.docker.com/blog/containers-replacing-virtual-machines/>. Acesso em: 16 dez. 2020.

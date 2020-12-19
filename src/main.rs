@@ -13,13 +13,14 @@ use console_engine::KeyCode;
 fn main() {
     let mut engine = console_engine::ConsoleEngine::init_fill_require(10, 10, 4);
 
-    let mut graph_h = graph_handler::GraphHandler::init();
+    let mut graph_h = graph_handler::GraphHandler::init(engine.get_width() as i32, engine.get_height() as i32);
 
-    let first_node = graph_h.add_first_node("start");
-    let teste = graph_h.add_neighbor(first_node, "teste");
-    let teste1 = graph_h.add_neighbor(first_node, "teste1");
-    let teste2 = graph_h.add_neighbor(teste1, "teste2");
-    let teste3 = graph_h.add_neighbor(teste2, "teste3");
+    //let first_node = graph_h.add_first_node("start");
+    //let teste = graph_h.add_neighbor(first_node, "teste");
+    //let teste1 = graph_h.add_neighbor(first_node, "teste1");
+    //let teste2 = graph_h.add_neighbor(teste1, "teste2");
+    //let teste3 = graph_h.add_neighbor(teste2, "teste3");
+    //let teste4 = graph_h.add_neighbor(teste2, "teste4");
 
 
     loop {

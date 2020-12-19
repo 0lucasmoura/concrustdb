@@ -8,3 +8,4 @@ keywords = ["terminal","database", "courseware"]
 [dependencies]
 console_engine = "1.4.2"
 petgraph = "0.5.1"
+rand = "0.7.3"
